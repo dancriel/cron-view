@@ -1,4 +1,4 @@
-=== Email Alerts ===
+=== Cron View ===
 Contributors: simonwheatley
 Donate link: http://www.simonwheatley.co.uk/wordpress/
 Tags: cron, wp_cron, development, developer tool
