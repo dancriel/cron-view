@@ -18,7 +18,7 @@
 	<table class="widefat fixed">
 		<thead>
 			<tr>
-				<th scope="col">Next due</th>
+				<th scope="col">Next due (GMT/UTC)</th>
 				<th scope="col">Schedule</th>
 				<th scope="col">Hook</th>
 				<th scope="col">Arguments</th>

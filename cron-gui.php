@@ -4,7 +4,7 @@ Plugin Name: Cron GUI
 Plugin URI: http://simonwheatley.co.uk/wordpress/cron-gui
 Description: See what's in the WP Cron schedule.
 Author: Simon Wheatley
-Version: 0.50b
+Version: 1.01
 Author URI: http://simonwheatley.co.uk/wordpress/
 */
 

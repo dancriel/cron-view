@@ -4,7 +4,7 @@ Donate link: http://www.simonwheatley.co.uk/wordpress/
 Tags: cron, wp_cron, development, developer tool
 Requires at least: 2.7
 Tested up to: 2.7.1
-Stable tag: 1.0
+Stable tag: 1.01
 
 Allows you to view all WP Cron events. Handy for development.
 
