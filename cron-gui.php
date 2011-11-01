@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Cron GUI
-Plugin URI: http://simonwheatley.co.uk/wordpress/cron-gui
+Plugin URI: http://wordpress.org/extend/plugins/cron-view/
 Description: See what's in the WP Cron schedule.
 Author: Simon Wheatley
-Version: 1.01
+Version: 1.02
 Author URI: http://simonwheatley.co.uk/wordpress/
 */
 
@@ -45,7 +45,7 @@ class CronGui extends CronGui_Plugin
 			$this->add_action( 'admin_menu' );
 		}
 		// Off we go
-		$this->register_plugin ( 'premium-content', __FILE__ );
+		$this->register_plugin ( 'cron-view', __FILE__ );
 	}
 	
 	// HOOKS
@@ -53,14 +53,14 @@ class CronGui extends CronGui_Plugin
 	
 	public function admin_menu()
 	{
-		add_submenu_page( 'tools.php', __( 'What\'s in Cron?' ), __( 'What\'s in Cron?' ), 'manage_options', 'cron_gui', array( & $this, 'tools_cron_page' )  );
+		add_submenu_page( 'tools.php', __( 'What\'s in Cron?', 'cron-view' ), __( 'What\'s in Cron?', 'cron-view' ), 'manage_options', 'cron_gui', array( & $this, 'tools_cron_page' )  );
 	}
 	
 	public function tools_cron_page()
 	{
 		$cron = _get_cron_array();
 		$schedules = wp_get_schedules();
-		$date_format = _c( 'M j, Y @ G:i|Publish box date format');
+		$date_format = _x( 'M j, Y @ G:i', 'Publish box date format', 'cron-view' );
 		foreach ( $cron as $timestamp => $cronhooks ) {
 			foreach ( (array) $cronhooks as $hook => $events ) {
 				foreach ( (array) $events as $key => $event ) {

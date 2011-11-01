@@ -2,10 +2,10 @@
 
 <div class="wrap" id="cron-gui">
 	<div id="icon-tools" class="icon32"><br /></div>
-	<h2><?php _e( 'What\'s in Cron?' ); ?></h2>
+	<h2><?php _e( 'What\'s in Cron?', 'cron-view' ); ?></h2>
 
 
-	<h3>Available schedules</h3>
+	<h3><?php _e('Available schedules', 'cron-view'); ?></h3>
 	
 	<ul>
 		<?php foreach( $schedules as $schedule ) { ?>
@@ -13,15 +13,15 @@
 		<?php } ?>
 	</ul>
 
-	<h3>Events</h3>
+	<h3><?php _e('Events', 'cron-view'); ?></h3>
 
 	<table class="widefat fixed">
 		<thead>
 			<tr>
-				<th scope="col">Next due (GMT/UTC)</th>
-				<th scope="col">Schedule</th>
-				<th scope="col">Hook</th>
-				<th scope="col">Arguments</th>
+				<th scope="col"><?php _e('Next due (GMT/UTC)', 'cron-view'); ?></th>
+				<th scope="col"><?php _e('Schedule', 'cron-view'); ?></th>
+				<th scope="col"><?php _e('Hook', 'cron-view'); ?></th>
+				<th scope="col"><?php _e('Arguments', 'cron-view'); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -35,7 +35,7 @@
 									if ( $event[ 'schedule' ] ) {
 										echo $schedules [ $event[ 'schedule' ] ][ 'display' ]; 
 									} else {
-										?><em>One-off event</em><?php
+										?><em><?php _e('One-off event', 'cron-view'); ?></em><?php
 									}
 								?>
 							</td>

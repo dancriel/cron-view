@@ -3,8 +3,8 @@ Contributors: simonwheatley
 Donate link: http://www.simonwheatley.co.uk/wordpress/
 Tags: cron, wp_cron, development, developer tool
 Requires at least: 2.7
-Tested up to: 2.7.1
-Stable tag: 1.01
+Tested up to: 3.2.1
+Stable tag: 1.02
 
 Allows you to view all WP Cron events. Handy for development.
 
@@ -33,6 +33,15 @@ The plugin is simple to install:
 1. Give yourself a pat on the back
 
 == Change Log ==
+
+= v1.02 =
+
+* Completed internationalisation
+* Replace _c with _x (thanks Barry Carlyon)
+
+= v1.01
+
+* I forget what happened here
 
 = v1 2009/01/06 =
 
