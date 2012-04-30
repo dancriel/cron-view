@@ -4,7 +4,7 @@ Plugin Name: Cron GUI
 Plugin URI: http://wordpress.org/extend/plugins/cron-view/
 Description: See what's in the WP Cron schedule.
 Author: Simon Wheatley
-Version: 1.02
+Version: 1.03
 Author URI: http://simonwheatley.co.uk/wordpress/
 */
 
@@ -39,8 +39,6 @@ class CronGui extends CronGui_Plugin
 	public function __construct()
 	{
 		if ( is_admin() ) {
-			// Activate
-			$this->register_activation ( __FILE__ );
 			// Admin menu
 			$this->add_action( 'admin_menu' );
 		}

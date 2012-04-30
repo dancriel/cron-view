@@ -1,10 +1,10 @@
 === Cron View ===
 Contributors: simonwheatley
-Donate link: http://www.simonwheatley.co.uk/wordpress/
+Donate link: http://www.simonwheatley.co.uk/wordpress/cron-gui
 Tags: cron, wp_cron, development, developer tool
 Requires at least: 2.7
-Tested up to: 3.2.1
-Stable tag: 1.02
+Tested up to: 3.3.2
+Stable tag: 1.03
 
 Allows you to view all WP Cron events. Handy for development.
 
@@ -33,6 +33,10 @@ The plugin is simple to install:
 1. Give yourself a pat on the back
 
 == Change Log ==
+
+= v1.03 =
+
+* Fix unexpected output when activated
 
 = v1.02 =
 
