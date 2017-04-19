@@ -19,6 +19,7 @@
 		<thead>
 			<tr>
 				<th scope="col"><?php _e('Next due (GMT/UTC)', 'cron-view'); ?></th>
+				<th scope="col"><?php _e('Local Time ('.get_option( 'timezone_string' ).')'); ?></th>
 				<th scope="col"><?php _e('Schedule', 'cron-view'); ?></th>
 				<th scope="col"><?php _e('Hook', 'cron-view'); ?></th>
 				<th scope="col"><?php _e('Arguments', 'cron-view'); ?></th>
@@ -27,9 +28,13 @@
 		<tbody>
 			<?php foreach ( $cron as $timestamp => $cronhooks ) { ?>
 				<?php foreach ( (array) $cronhooks as $hook => $events ) { ?>
-					<?php foreach ( (array) $events as $event ) { ?>
+					<?php foreach ( (array) $events as $event ) { 
+						$local_datetime = new DateTime( str_replace( '@', '', $event[ 'date' ] ) );
+						$local_datetime->setTimezone( new DateTimeZone( get_option( 'timezone_string' ) ) );
+					?>
 						<tr>
 							<th scope="row"><?php echo $event[ 'date' ]; ?> (<?php echo $timestamp; ?>)</th>
+							<th scope="row"><?php echo $local_datetime->format('M j, Y @ G:i'); ?></th>
 							<td>
 								<?php 
 									if ( $event[ 'schedule' ] ) {
